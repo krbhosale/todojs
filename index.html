@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./TodoLogo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="AppContainer">
+      <div id="BlurBg"></div>
+      <header class="FlexContainer">
+        <div class="AppLogo FlexContainer">
+          <img src="./TodoLogo.png" alt="App-Logo" />
+          <h1>Task List</h1>
+        </div>
+        <button id="BackButton" class="UnactivePopup">
+          <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+        <button class="FlexContainer" id="addItemPopupBtn">
+          <i class="fa-solid fa-circle-plus plus-color"></i
+          ><span class="addPopupbtnText">Add Item</span>
+        </button>
+      </header>
+      <div class="SingleCardContainer UnactivePopup">
+        <h2 id="ClickedCardHeading"></h2>
+      </div>
+      <section id="TaskCardContainer">
+        <h3 id="DefaultText">No Items in the todo list</h3>
+      </section>
+    </main>
+
+    <div id="AddItemPopup" class="FlexContainer UnactivePopup">
+      <h4 class="TaskPopupHeading">
+        Add New Task list
+    </h4>
+      <input
+        type="text"
+        id="TaskListNameInput"
+        class="PopupInput"
+        placeholder="Add New List"
+        maxlength="30"
+      />
+        <div class="FlexContainer2">
+            <button id="AddNewTaskBtn" class="PoupWindowButton AddButton">Add</button>
+            <button id="AddNewTaskBtn" class="PoupWindowButton CloseButton ClosePopup">Close</button>
+        </div>
+    </div>
+
+    <div id="AddSubTaskPopup" class="FlexContainer UnactivePopup">
+      <h4 class="TaskPopupHeading">
+        Add New Sub Task
+      </h4>
+      <input
+        type="text"
+        id="subTaskNameInput"
+        class="PopupInput"
+        placeholder="Add New List"
+        maxlength="30"
+      />
+        <div class="FlexContainer2">
+          <button id="AddNewSubTaskBtn" class="PoupWindowButton AddButton">Add</button>
+          <button id="AddNewSubTaskBtn" class="PoupWindowButton CloseButton ClosePopup">Close</button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
